@@ -1,17 +1,5 @@
 <div id="water-video" class="absolute inset-0 h-full w-full overflow-hidden">
-  <video preload="true" autoplay muted>
+  <video preload="true" autoplay muted loop>
     <source src="water-bg.mov" />
   </video>
 </div>
-
-<script>
-  const video: HTMLVideoElement | null = document.getElementById(
-    "water-video",
-  ) as HTMLVideoElement | null;
-
-  if (video) {
-    video.addEventListener("ended", () => {
-      video.currentTime = 0;
-    });
-  }
-</script>
