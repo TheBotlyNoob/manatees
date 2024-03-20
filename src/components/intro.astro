@@ -8,6 +8,18 @@ import scars4 from "~/assets/scars4.webp";
 import scars5 from "~/assets/scars5.webp";
 import scars6 from "~/assets/scars6.webp";
 
+const bibliography = [
+  "https://myfwc.com/research/manatee/research/population-monitoring/synoptic-surveys/",
+  "https://www.floridamuseum.ufl.edu/100-years/object/florida-manatee/",
+  "https://myfwc.com/wildlifehabitats/wildlife/manatee/myfwc-com-how-to-help/",
+  "https://www.worldwildlife.org/stories/5-things-you-might-not-know-about-manatees",
+  "https://www.pbs.org/wnet/nature/blog/manatee-fact-sheet/",
+  "https://www.washingtonian.com/2023/09/01/yes-a-manatee-was-spotted-in-the-chesapeake-bay/",
+  "https://www.worldwildlife.org/stories/5-things-you-might-not-know-about-manatees",
+  "https://en.wikipedia.org/wiki/Florida_Fish_and_Wildlife_Conservation_Commission",
+  "https://www.thedodo.com/boats-injure-florida-manatees-2368810374.html",
+];
+
 import { Image } from "astro:assets";
 ---
 
@@ -78,10 +90,11 @@ import { Image } from "astro:assets";
   </p>
 
   <p class="max-w-7xl pt-24 text-center font-bold text-2xl">
-    <span class="text-primary">Manatees can be hard to see in the water</span>- they are easily mistaken for rocks
-    due to their grayish color. They look like oblique shadows in cloudy water,
-    and can be difficult to point out. However, when they come up to the surface
-    to breathe, they can be very loud, which alerts you to their presence.
+    <span class="text-primary">Manatees can be hard to see in the water</span>-
+    they are easily mistaken for rocks due to their grayish color. They look
+    like oblique shadows in cloudy water, and can be difficult to point out.
+    However, when they come up to the surface to breathe, they can be very loud,
+    which alerts you to their presence.
   </p>
 </section>
 
@@ -126,5 +139,32 @@ import { Image } from "astro:assets";
         class="object-scale-down"
       />
     </div>
+  </div>
+</section>
+
+<div class="my-8 h-2 w-full rounded-md border-0 bg-gray-200 dark:bg-gray-700">
+</div>
+
+<section class="scroll-mt-24">
+  <div class="flex flex-col items-center gap-4 space-y-8">
+    <h2
+      class="gradient-text text-center font-extrabold tracking-tight text-6xl"
+    >
+      Bibliography
+    </h2>
+    <ul>
+      {
+        bibliography.map((link) => (
+          <li>
+            <a
+              class="max-w-7xl text-center font-bold text-blue-300 underline text-2xl"
+              href={link}
+            >
+              {link}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
   </div>
 </section>

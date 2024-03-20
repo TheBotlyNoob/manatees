@@ -4,9 +4,7 @@
     // Alias `src` to `~`
     "baseUrl": ".",
     "paths": {
-      "~/*": [
-        "src/*"
-      ]
+      "~/*": ["src/*"]
     },
     "plugins": [
       {
