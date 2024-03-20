@@ -4,7 +4,8 @@ import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://jjay.dev/",
+  site: "https://jjay.dev",
+  base: "/manatees",
   integrations: [tailwind(), icon()],
   vite: {
     assetsInclude: ["**/*.mov", "**/*.webm"],
