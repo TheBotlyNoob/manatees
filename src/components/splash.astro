@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets";
+import manateeImage from "~/assets/manatee.png";
+import Video from "~/components/splash-video.astro";
+---
+
+<section class="relative h-full bg-black">
+  <Video />
+  <div class="relative grid h-full w-full place-items-center">
+    <h2 class="flex flex-col items-center">
+      <Image
+        src={manateeImage}
+        alt="manatee"
+        class="size-24 text-white md:size-32"
+      />
+      <div class="gradient-text ml-4 text-center tracking-tighter text-4xl">
+        Manatees may have been taken off the endangered species list, but
+      </div>
+      <div
+        class="gradient-text ml-4 text-center font-extrabold tracking-tighter text-6xl"
+      >
+        the fight isn't over yet.
+      </div>
+    </h2>
+  </div>
+</section>
